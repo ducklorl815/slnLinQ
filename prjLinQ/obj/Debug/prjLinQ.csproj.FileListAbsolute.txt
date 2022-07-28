@@ -1,0 +1,12 @@
+C:\Users\Student\source\repos\slnLinQ\prjLinQ\bin\Debug\prjLinQ.exe.config
+C:\Users\Student\source\repos\slnLinQ\prjLinQ\bin\Debug\prjLinQ.exe
+C:\Users\Student\source\repos\slnLinQ\prjLinQ\bin\Debug\prjLinQ.pdb
+C:\Users\Student\source\repos\slnLinQ\prjLinQ\obj\Debug\prjLinQ.csprojAssemblyReference.cache
+C:\Users\Student\source\repos\slnLinQ\prjLinQ\obj\Debug\prjLinQ.Properties.Resources.resources
+C:\Users\Student\source\repos\slnLinQ\prjLinQ\obj\Debug\prjLinQ.csproj.GenerateResource.cache
+C:\Users\Student\source\repos\slnLinQ\prjLinQ\obj\Debug\prjLinQ.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\slnLinQ\prjLinQ\obj\Debug\prjLinQ.exe
+C:\Users\Student\source\repos\slnLinQ\prjLinQ\obj\Debug\prjLinQ.pdb
+C:\Users\Student\source\repos\slnLinQ\prjLinQ\obj\Debug\prjLinQ.作業2.resources
+C:\Users\Student\source\repos\slnLinQ\prjLinQ\obj\Debug\prjLinQ.作業1.resources
+C:\Users\Student\source\repos\slnLinQ\prjLinQ\obj\Debug\prjLinQ.作業3.resources
