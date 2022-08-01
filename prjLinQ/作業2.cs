@@ -60,13 +60,14 @@ namespace prjLinQ
         {
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                dataGridView1.Rows[i].Height = 30;
+                dataGridView1.Rows[i].Height = 40;
             }
-               
+            dataGridView1.Columns[0].Width = 40;
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
+            
             if (comboBox2.SelectedItem == null)
                 return;
             if (comboBox2.Text == "第一季")
@@ -75,6 +76,7 @@ namespace prjLinQ
                         where p.ModifiedDate.Month < 4
                         select p;
                 this.dataGridView1.DataSource = q.ToList();
+                this.lblMaster.Text = comboBox2.Text + " 為 " + q.Count() + " 筆";
             }
             if (comboBox2.Text == "第二季")
             {
@@ -82,6 +84,7 @@ namespace prjLinQ
                         where 3 < p.ModifiedDate.Month && p.ModifiedDate.Month < 7
                         select p;
                 this.dataGridView1.DataSource = q.ToList();
+                this.lblMaster.Text = comboBox2.Text + " 為 " + q.Count() + " 筆";
             }
             if (comboBox2.Text == "第三季")
             {
@@ -89,6 +92,7 @@ namespace prjLinQ
                         where 6 < p.ModifiedDate.Month && p.ModifiedDate.Month < 10
                         select p;
                 this.dataGridView1.DataSource = q.ToList();
+                this.lblMaster.Text = comboBox2.Text + " 為 " + q.Count() + " 筆";
             }
 
             if (comboBox2.Text == "第四季")
@@ -97,8 +101,8 @@ namespace prjLinQ
                         where 9 < p.ModifiedDate.Month && p.ModifiedDate.Month < 12
                         select p;
                 this.dataGridView1.DataSource = q.ToList();
+                this.lblMaster.Text = comboBox2.Text + " 為 " + q.Count() + " 筆";
             }
-
             setGridStyle();
         }
 
@@ -107,6 +111,7 @@ namespace prjLinQ
             
             if (comboBox3.SelectedItem == null)
                 return;
+            this.lblMaster.Text = $"第 {comboBox3.Text} 年的資料";
             var q = from p in this.awDataSet1.ProductPhoto
                     where p.ModifiedDate.Year == int.Parse(comboBox3.Text)
                     select new
@@ -143,6 +148,8 @@ namespace prjLinQ
         {
             lblDetails.Text = dataGridView1.CurrentRow.Cells["ThumbnailPhotoFileName"].Value.ToString();
             lblMaster.Text = dataGridView1.CurrentRow.Cells["LargePhotoFileName"].Value.ToString();
+
+
             byte[] ByteData = (byte[])dataGridView1.CurrentRow.Cells["LargePhoto"].Value;
             MemoryStream memoryStream = new MemoryStream(ByteData);
             pictureBox1.Image = Image.FromStream(memoryStream);
@@ -151,7 +158,7 @@ namespace prjLinQ
 
         private void comboBox3_SelectedValueChanged(object sender, EventArgs e)
         {
-            this.lblMaster.Text = $"{comboBox3.Text}";
+            this.lblMaster.Text = $"第 {comboBox3.Text} 年的資料";
             var q = from p in this.awDataSet1.ProductPhoto
                     where p.ModifiedDate.Year == int.Parse(comboBox3.Text)
                     select new
@@ -169,13 +176,14 @@ namespace prjLinQ
 
         private void comboBox2_SelectedValueChanged(object sender, EventArgs e)
         {
-            this.lblMaster.Text=comboBox2.Text;
+
             if (comboBox2.Text == "第一季")
             {
                 var q = from p in this.awDataSet1.ProductPhoto
                         where p.ModifiedDate.Month < 4
                         select p;
                 this.dataGridView1.DataSource = q.ToList();
+                this.lblMaster.Text = comboBox2.Text+" 為 "+q.Count()+ " 筆";
             }
             if (comboBox2.Text == "第二季")
             {
@@ -183,6 +191,7 @@ namespace prjLinQ
                         where 3 < p.ModifiedDate.Month && p.ModifiedDate.Month < 7
                         select p;
                 this.dataGridView1.DataSource = q.ToList();
+                this.lblMaster.Text = comboBox2.Text + " 為 " + q.Count() + " 筆";
             }
             if (comboBox2.Text == "第三季")
             {
@@ -190,6 +199,7 @@ namespace prjLinQ
                         where 6 < p.ModifiedDate.Month && p.ModifiedDate.Month < 10
                         select p;
                 this.dataGridView1.DataSource = q.ToList();
+                this.lblMaster.Text = comboBox2.Text + " 為 " + q.Count() + " 筆";
             }
 
             if (comboBox2.Text == "第四季")
@@ -198,9 +208,12 @@ namespace prjLinQ
                         where 9 < p.ModifiedDate.Month && p.ModifiedDate.Month < 12
                         select p;
                 this.dataGridView1.DataSource = q.ToList();
+                this.lblMaster.Text = comboBox2.Text + " 為 " + q.Count() + " 筆";
             }
 
             setGridStyle();
         }
+
+
     }
 }

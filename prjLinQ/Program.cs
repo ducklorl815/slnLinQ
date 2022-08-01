@@ -19,9 +19,11 @@ namespace prjLinQ
             if (System.Environment.OSVersion.Version.Major >= 6) { SetProcessDPIAware(); }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new LinQMDI());
             //Application.Run(new 作業1());
-            Application.Run(new 作業2());
+            //Application.Run(new 作業2());
             //Application.Run(new 作業3());
+            //Application.Run(new 作業4());
         }
     }
 }
